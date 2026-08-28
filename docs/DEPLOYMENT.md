@@ -2,6 +2,13 @@
 
 Termline is a Next.js 14 app. Core features run in the browser without DATABASE_URL.
 
+## Public URLs
+
+- Production alias: https://termline-sgue19000.vercel.app/
+- Deployment URL: https://termline-ny7e93drv-sgue19000.vercel.app/
+
+Deployment Protection / Vercel Authentication must stay **off** for Production or visitors hit an SSO wall.
+
 ## Vercel
 
 - Framework: Next.js
@@ -11,7 +18,7 @@ Termline is a Next.js 14 app. Core features run in the browser without DATABASE_
 - Required env: none
 - Optional env: DATABASE_URL, AUTH_SECRET, APP_URL, SMTP_*
 
-Git push to main triggers production. Other branches get preview deployments when the Git integration is linked.
+Git push to main triggers production when the GitHub integration is linked.
 
 ## Local
 
@@ -25,5 +32,5 @@ npm start
 
 ## Database absence
 
-/api/health returns `{ ok: true, mode: "local" }` without DATABASE_URL.
-/api/terms returns 501 with a JSON error. The UI uses localStorage and does not depend on that route.
+GET /api/health returns `{ ok: true, product: "termline", mode: "local" }` without DATABASE_URL.
+GET /api/terms returns 501 with a JSON error. The UI uses localStorage and does not depend on that route.
