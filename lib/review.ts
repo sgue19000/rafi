@@ -1,6 +1,6 @@
-import type { Term } from "./types.ts";
-import { daysUntil } from "./dates.ts";
-import { annualize } from "./money.ts";
+import type { Term } from "./types";
+import { daysUntil } from "./dates";
+import { annualize } from "./money";
 
 export function urgencyScore(term: Term, from = new Date()): number {
   const days = daysUntil(term.nextDate, from);

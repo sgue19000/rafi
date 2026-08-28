@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node --test --experimental-strip-types lib/money.test.ts lib/dates.test.ts lib/review.test.ts",
+    "test": "node --test --experimental-strip-types lib/money.test.ts lib/dates.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

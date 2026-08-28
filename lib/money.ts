@@ -1,4 +1,4 @@
-import type { Cadence } from "./types.ts";
+import type { Cadence } from "./types";
 
 export function annualize(amount: number, cadence: Cadence): number {
   if (!Number.isFinite(amount) || amount < 0) return 0;
